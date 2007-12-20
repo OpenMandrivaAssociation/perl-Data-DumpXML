@@ -11,6 +11,7 @@ License: 	GPL or Artistic
 Group: 		Development/Perl
 Source0: 	http://www.cpan.org/authors/id/GAAS/%{module}-%{version}.tar.bz2
 BuildRequires:	perl-devel perl-Array-RefElem perl-MIME-Base64 perl-XML-Parser
+BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 URL:		http://search.cpan.org/dist/%{module}/
 Requires: 	perl-Array-RefElem >= 0.02
 BuildArch:	noarch

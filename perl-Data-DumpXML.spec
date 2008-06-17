@@ -1,7 +1,7 @@
 %define	module	Data-DumpXML
 %define	name	perl-%{module}
 %define	version	1.06
-%define	release	%mkrel 4
+%define	release	%mkrel 5
 
 Summary:	Dump arbitrary perl data structures as XML
 Name: 		%{name}

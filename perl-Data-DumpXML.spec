@@ -1,26 +1,28 @@
-%define	module	Data-DumpXML
-%define	name	perl-%{module}
-%define	version	1.06
-%define	release	%mkrel 5
+%define	upstream_name	 Data-DumpXML
+%define	upstream_version 1.06
+
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
 Summary:	Dump arbitrary perl data structures as XML
-Name: 		%{name}
-Version: 	%{version}
-Release: 	%{release}
-License: 	GPL or Artistic
+License: 	GPL+ or Artistic
 Group: 		Development/Perl
-Source0: 	http://www.cpan.org/authors/id/GAAS/%{module}-%{version}.tar.bz2
-BuildRequires:	perl-devel perl-Array-RefElem perl-MIME-Base64 perl-XML-Parser
-BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
-URL:		http://search.cpan.org/dist/%{module}/
-Requires: 	perl-Array-RefElem >= 0.02
+Url:		http://search.cpan.org/dist/%{upstream_name}/
+Source0: 	http://www.cpan.org/authors/id/GAAS/%{upstream_name}-%{upstream_version}.tar.bz2
+
+BuildRequires:	perl-Array-RefElem
+BuildRequires:  perl-MIME-Base64
+BuildRequires:  perl-XML-Parser
 BuildArch:	noarch
+BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}
+Requires: 	perl-Array-RefElem >= 0.02
 
 %description
 Dump arbitrary perl data structures as XML.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor 
@@ -41,4 +43,3 @@ rm -rf $RPM_BUILD_ROOT
 %doc README Changes
 %{_mandir}/*/*
 %{perl_vendorlib}/Data
-

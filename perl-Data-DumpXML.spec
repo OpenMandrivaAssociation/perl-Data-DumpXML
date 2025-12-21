@@ -10,6 +10,7 @@ Group:		Development/Perl
 Url:		https://search.cpan.org/dist/%{modname}/
 Source0:	http://www.cpan.org/authors/id/GAAS/%{modname}-%{modver}.tar.bz2
 BuildArch:	noarch
+BuildRequires:	make
 BuildRequires:	perl-Array-RefElem
 BuildRequires:	perl-MIME-Base64
 BuildRequires:	perl-XML-Parser

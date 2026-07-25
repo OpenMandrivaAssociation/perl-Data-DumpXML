@@ -3,12 +3,12 @@
 
 Summary:	Dump arbitrary perl data structures as XML
 Name:		perl-%{modname}
-Version:	%perl_convert_version %{modver}
-Release:	17
+Version:	%{modver}
+Release:	18
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{modname}/
-Source0:	http://www.cpan.org/authors/id/GAAS/%{modname}-%{modver}.tar.bz2
+Url:		https://metacpan.org/dist/Data-DumpXML
+Source0:	https://cpan.metacpan.org/authors/id/G/GA/GAAS/Data-DumpXML-%{modver}.tar.gz
 BuildArch:	noarch
 BuildRequires:	make
 BuildRequires:	perl-Array-RefElem
